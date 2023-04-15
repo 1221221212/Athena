@@ -1,0 +1,38 @@
+.conveyer {
+    padding: 50px 0;
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+}
+
+.conveyer img{
+    height: 150px;
+}
+
+.conveyer a{
+    margin: 20px;
+}
+
+.belt1 , .belt2 {
+    display: inline-flex;
+    flex: none;
+    animation: belt 30s 0s linear infinite; /* スライド速度と開始遅延時間 */
+}
+
+.conveyer:hover div {
+    animation-play-state: paused!important; /* ホバー時にスライダー停止 */
+    .belt1 div , .belt2 div {
+    flex: none;
+    padding: 10px; /* 画像の間の間隔 */
+}
+
+@keyframes belt { /* belt1とbelt2を移動させる */
+    0% {
+    transform: translateX(0);
+    }
+    100% {
+    transform: translateX(-100%);
+    }
+}
+}
